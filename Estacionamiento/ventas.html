@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8" />
+    <title>Ventas y Disponibilidad</title>
+    <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" src="style.css">
+
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white" >
+    <!-- Container wrapper -->
+    <div class="container-fluid" style="background-color:#FFF176">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="Logo.png"
+            height="45"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning">Caja</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning">Ventas</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning">Informes</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning">Ajustes</button>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="link-secondary me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+  
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a
+            class="link-secondary me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Some news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              class="rounded-circle"
+              height="25"
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuAvatar"
+          >
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+    
+<DIV>
+    <table class="table table-striped">
+          
+            <tr>
+            <td><h4>Plaza#</h4></td>
+            <td> <input type="text" style="width:80px" placeholder="Dominio" maxlength=7 onkeypress=/></td>
+            <td> <select id="Tipo de Estadia">
+                <option disabled selected>Tipo de Estadía</option>
+                <option>Libre</option>
+                <option>12 horas</option>
+                <option>24 horas</option>
+                <option>Abonado</option>
+              </select></td>
+            <td> <select id="Tipo_de_Vehiculo">
+                    <option disabled selected>Tipo de Vehículo</option>
+                    <option>Moto</option>
+                    <option>Auto</option>
+                    <option>Pick Up</option>
+                    <option>Otros</option>
+                  </select>
+            </td>
+           <td> <button type="button" style= "font-size:small"  class="btn btn-success">Iniciar Estadía</button> </td>
+          
+            <td>
+                <label for="basic-url" style= "font-size:small" class="form-label">Horario de Ingreso</label>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"></span>
+  <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+            </td>
+            <td><button type="button" style= "font-size:small" class="btn btn-primary">Generar Ticket</button></td>
+            <td><button type="button" style= "font-size:small" class="btn btn-danger">Finalizar Estadía</button></td>
+            <td>
+                <label for="basic-url" style= "font-size:small" class="form-label">Horario de Egreso</label>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"></span>
+  <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+            </td>
+            <td>
+                <label for="basic-url" style= "font-size:small" class="form-label">Duración(Hs)</label>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"></span>
+  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+            </td>
+            <td>
+                <label for="basic-url" style= "font-size:small" class="form-label">Total($)</label>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"></span>
+  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+            </td>
+            <td>
+                <label for="basic-url" style= "font-size:small" class="form-label">Referencia de Caja</label>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"></span>
+  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+            </td>
+
+            <tr>
+                <td><h4>Plaza#</h4></td>
+                <td> <input type="text" style="width:80px" placeholder="Dominio" maxlength=7 onkeypress=/></td>
+                <td> <select id="Tipo de Estadia">
+                    <option disabled selected>Tipo de Estadía</option>
+                    <option>Libre</option>
+                    <option>12 horas</option>
+                    <option>24 horas</option>
+                    <option>Abonado</option>
+                  </select></td>
+                <td> <select id="Tipo_de_Vehiculo">
+                        <option disabled selected>Tipo de Vehículo</option>
+                        <option>Moto</option>
+                        <option>Auto</option>
+                        <option>Pick Up</option>
+                        <option>Otros</option>
+                      </select>
+                </td>
+               <td> <button type="button" style= "font-size:small"  class="btn btn-success">Iniciar Estadía</button> </td>
+              
+                <td>
+                    <label for="basic-url" style= "font-size:small" class="form-label">Horario de Ingreso</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3"></span>
+      <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+                </td>
+                <td><button type="button" style= "font-size:small" class="btn btn-primary">Generar Ticket</button></td>
+                <td><button type="button" style= "font-size:small" class="btn btn-danger">Finalizar Estadía</button></td>
+                <td>
+                    <label for="basic-url" style= "font-size:small" class="form-label">Horario de Egreso</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3"></span>
+      <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+                </td>
+                <td>
+                    <label for="basic-url" style= "font-size:small" class="form-label">Duración(Hs)</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3"></span>
+      <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+                </td>
+                <td>
+                    <label for="basic-url" style= "font-size:small" class="form-label">Total($)</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3"></span>
+      <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+                </td>
+                <td>
+                    <label for="basic-url" style= "font-size:small" class="form-label">Referencia de Caja</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3"></span>
+      <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+                </td>
+                <tr>
+                    <td><h4>Plaza#</h4></td>
+                    <td> <input type="text" style="width:80px" placeholder="Dominio" maxlength=7 onkeypress=/></td>
+                    <td> <select id="Tipo de Estadia">
+                        <option disabled selected>Tipo de Estadía</option>
+                        <option>Libre</option>
+                        <option>12 horas</option>
+                        <option>24 horas</option>
+                        <option>Abonado</option>
+                      </select></td>
+                    <td> <select id="Tipo_de_Vehiculo">
+                            <option disabled selected>Tipo de Vehículo</option>
+                            <option>Moto</option>
+                            <option>Auto</option>
+                            <option>Pick Up</option>
+                            <option>Otros</option>
+                          </select>
+                    </td>
+                   <td> <button type="button" style= "font-size:small"  class="btn btn-success">Iniciar Estadía</button> </td>
+                  
+                    <td>
+                        <label for="basic-url" style= "font-size:small" class="form-label">Horario de Ingreso</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"></span>
+          <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+                    </td>
+                    <td><button type="button" style= "font-size:small" class="btn btn-primary">Generar Ticket</button></td>
+                    <td><button type="button" style= "font-size:small" class="btn btn-danger">Finalizar Estadía</button></td>
+                    <td>
+                        <label for="basic-url" style= "font-size:small" class="form-label">Horario de Egreso</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"></span>
+          <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+                    </td>
+                    <td>
+                        <label for="basic-url" style= "font-size:small" class="form-label">Duración(Hs)</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"></span>
+          <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+                    </td>
+                    <td>
+                        <label for="basic-url" style= "font-size:small" class="form-label">Total($)</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"></span>
+          <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+                    </td>
+                    <td>
+                        <label for="basic-url" style= "font-size:small" class="form-label">Referencia de Caja</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3"></span>
+          <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+                    </td>
+                    <tr>
+                        <td><h4>Plaza#</h4></td>
+                        <td> <input type="text" style="width:80px" placeholder="Dominio" maxlength=7 onkeypress=/></td>
+                        <td> <select id="Tipo de Estadia">
+                            <option disabled selected>Tipo de Estadía</option>
+                            <option>Libre</option>
+                            <option>12 horas</option>
+                            <option>24 horas</option>
+                            <option>Abonado</option>
+                          </select></td>
+                        <td> <select id="Tipo_de_Vehiculo">
+                                <option disabled selected>Tipo de Vehículo</option>
+                                <option>Moto</option>
+                                <option>Auto</option>
+                                <option>Pick Up</option>
+                                <option>Otros</option>
+                              </select>
+                        </td>
+                       <td> <button type="button" style= "font-size:small"  class="btn btn-success">Iniciar Estadía</button> </td>
+                      
+                        <td>
+                            <label for="basic-url" style= "font-size:small" class="form-label">Horario de Ingreso</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3"></span>
+              <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+                        </td>
+                        <td><button type="button" style= "font-size:small" class="btn btn-primary">Generar Ticket</button></td>
+                        <td><button type="button" style= "font-size:small" class="btn btn-danger">Finalizar Estadía</button></td>
+                        <td>
+                            <label for="basic-url" style= "font-size:small" class="form-label">Horario de Egreso</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3"></span>
+              <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+                        </td>
+                        <td>
+                            <label for="basic-url" style= "font-size:small" class="form-label">Duración(Hs)</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3"></span>
+              <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+                        </td>
+                        <td>
+                            <label for="basic-url" style= "font-size:small" class="form-label">Total($)</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3"></span>
+              <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+                        </td>
+                        <td>
+                            <label for="basic-url" style= "font-size:small" class="form-label">Referencia de Caja</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3"></span>
+              <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+                        </td>
+                        <tr>
+                            <td><h4>Plaza#</h4></td>
+                            <td> <input type="text" style="width:80px" placeholder="Dominio" maxlength=7 onkeypress=/></td>
+                            <td> <select id="Tipo de Estadia">
+                                <option disabled selected>Tipo de Estadía</option>
+                                <option>Libre</option>
+                                <option>12 horas</option>
+                                <option>24 horas</option>
+                                <option>Abonado</option>
+                              </select></td>
+                            <td> <select id="Tipo_de_Vehiculo">
+                                    <option disabled selected>Tipo de Vehículo</option>
+                                    <option>Moto</option>
+                                    <option>Auto</option>
+                                    <option>Pick Up</option>
+                                    <option>Otros</option>
+                                  </select>
+                            </td>
+                           <td> <button type="button" style= "font-size:small"  class="btn btn-success">Iniciar Estadía</button> </td>
+                          
+                            <td>
+                                <label for="basic-url" style= "font-size:small" class="form-label">Horario de Ingreso</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"></span>
+                  <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                            </td>
+                            <td><button type="button" style= "font-size:small" class="btn btn-primary">Generar Ticket</button></td>
+                            <td><button type="button" style= "font-size:small" class="btn btn-danger">Finalizar Estadía</button></td>
+                            <td>
+                                <label for="basic-url" style= "font-size:small" class="form-label">Horario de Egreso</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"></span>
+                  <input type="time" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                            </td>
+                            <td>
+                                <label for="basic-url" style= "font-size:small" class="form-label">Duración(Hs)</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"></span>
+                  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                            </td>
+                            <td>
+                                <label for="basic-url" style= "font-size:small" class="form-label">Total($)</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"></span>
+                  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                            </td>
+                            <td>
+                                <label for="basic-url" style= "font-size:small" class="form-label">Referencia de Caja</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"></span>
+                  <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                            </td>
+           
+      </table>
+
+
+</DIV>
+
+
+
+</body>
+
+</html>
