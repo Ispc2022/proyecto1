@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Pongo los enlases -->
+    <!-- Agrego clases a los enlases (class="nav-enlace desaparece")  -->
+    <nav>
+        <button class="nav-boton" onclick="accion()">Menú</button>
+        <a href="#" class="nav-enlace desaparece"><img src="Logos/LOGO.png" width="150"></a>       
+        <a href="#" class="nav-enlace desaparece"><img src="Logos/CAJA.png" width="25">CAJA</a>
+        <a href="#" class="nav-enlace desaparece"><img src="Logos/VENTAS.png" width="25">VENTAS</a>
+        <a href="#" class="nav-enlace desaparece"><img src="Logos/USUARIOS.png" width="20">USUARIOS</a>
+    </nav>
+
+    <div class="section-boton">  
+        <a href="#" class="sec-boton">Caja Diaria</a>      
+        <a href="#" class="sec-boton">Cierre de Caja</a> 
+        <a href="#" class="sec-boton">Informes</a> 
+        <a href="#" class="sec-boton">Lugares</a> 
+        <a href="#" class="sec-boton">Altas y Bajas</a> 
+        <a href="#" class="sec-boton">Informes</a> 
+        <a href="#" class="sec-boton">Altas y Bajas</a> 
+        <a href="#" class="sec-boton">Informes</a> 
+    </div>
+
+
+
+
+
+
+    <!-- <div> 
+        <br>
+        <a href="#" class="Sec-Boton">Caja Diaria</a> 
+        <br>      
+        <a href="#" class="Sec-Boton">Cierre de Caja</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Informes</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Lugares</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Altas y Bajas</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Informes</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Altas y Bajas</a> 
+        <br>
+        <a href="#" class="Sec-Boton">Informes</a> 
+        <br>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        var ancla = document.getElementsByClassName('nav-enlace');
+        for(var i = 0; i < ancla.length; i++){
+            ancla[i].classList.toggle('desaparece');
+        }
+    }
+    </script>
+
+
+
+
+</body>
+</html>
