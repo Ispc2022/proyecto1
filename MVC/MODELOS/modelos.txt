@@ -1,0 +1,6 @@
+elegimos sql como base de datos.
+adjuntamos diagrama y script con las tablas que van a formar parte de la aplicacion.
+
+
+(no entendimos esta consigna: volcamos toda la informacion en cada area como pudimos,
+esperando una correccion que despeje nuestras dudas)
