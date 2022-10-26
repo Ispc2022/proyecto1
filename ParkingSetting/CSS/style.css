@@ -1,10 +1,10 @@
-.nav-enlace{
+.nav-enlace {
     /* Convierte los enlaces en Bloques de linea */
     display: inline-block;
-   /* Color de Botones */
+    /* Color de Botones */
     background: #F4D03F;
-   /* Color de Texto */
-    color:#000000;    
+    /* Color de Texto */
+    color: #000000;
     /* Margenes de los Botones */
     padding: 1px 5px;
     /* Quita el subrayado de enlases */
@@ -14,17 +14,20 @@
     /* Borde de Fuente */
     font-weight: 800;
 }
-.nav-enlace:hover{
+
+.nav-enlace:hover {
     background: orange;
 }
-nav{
+
+nav {
     background: #F4D03F;
     padding: 10px;
     display: flex;
-    justify-content: left; 
+    justify-content: left;
     margin: 0px 0px 20px 0px;
 }
-.nav-boton{
+
+.nav-boton {
     background: salmon;
     color: #fff;
     padding: 10px 0;
@@ -32,178 +35,196 @@ nav{
     display: none;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* Color de fondo del Section */
-body{
+body {
     background: #fff
 }
 
 /* Esta clase hace referencia a todos los botones del Section */
-.contenedor{
+.contenedor {
     align-content: center;
     /* Alineacion */
     justify-content: center;
     display: grid;
     /* Espacio desde la zona de botones hacia arriba y hacia abajo */
-    
+
     /* Lo puse para corregir, no me funciono */
     /* margin-top: 30%; */
 }
 
-.btn2{
-border: 3px solid rgba(100,100,100,0.1);  
-/* Margen alrededor del boton */
-margin-bottom: 20px;
-/* Alto del boton, oooo margen interno con respecto a la palabra */
-padding: 20px;
-/* Ancho del boton */
-width: 300px;
-/* Radio de las esquinas del boton */
-border-radius: 8px;
-/* velocidad de transicion del hover */
-transition: 0.6s;   
-/* Dibujito del cursor, en este caso la manito */
-cursor: pointer;
-/* Fuente: Tipo de fuente */
-font-family: 'poppins', sans-serif;
-/* Tamaño de fuente */
-font-size: 16px;
-/* Fuente: Color */
-color: #ffffff;
-/* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
-font-weight: 0;
-/* Creeeeooo que es el nivel de transparencia */
-background-size: 300%;                  
+.btn2 {
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    /* Margen alrededor del boton */
+    margin-bottom: 20px;
+    /* Alto del boton, oooo margen interno con respecto a la palabra */
+    padding: 20px;
+    /* Ancho del boton */
+    width: 300px;
+    /* Radio de las esquinas del boton */
+    border-radius: 8px;
+    /* velocidad de transicion del hover */
+    transition: 0.6s;
+    /* Dibujito del cursor, en este caso la manito */
+    cursor: pointer;
+    /* Fuente: Tipo de fuente */
+    font-family: 'poppins', sans-serif;
+    /* Tamaño de fuente */
+    font-size: 16px;
+    /* Fuente: Color */
+    color: #ffffff;
+    /* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
+    font-weight: 0;
+    /* Creeeeooo que es el nivel de transparencia */
+    background-size: 300%;
 }
 
 /* |Direccion de degradado: Angulo(Ejemplo 45deg) o lado(Ejemplo left) | cantidad de colores que quieras |  */
-.btn1{background-image: linear-gradient(to left, #00B7DA, #161569, #00B7DA);}
+.btn1 {
+    background-image: linear-gradient(to left, #00B7DA, #161569, #00B7DA);
+}
 
 /* Pseudoclases: Son como las clases pero sirven para configurar diferentes estados de los elementos */
 /* Pseudo clase para el boton, cuando el mause se coloca encima de el (Ver tambien velocidad de transicion) */
-.btn2:hover{
+.btn2:hover {
     background-position: right;
 }
 
 /* Pseudo clase para los link que estan en los botones, sirve para no revelar enlases vicitados y que tengan el mismo color que los no visitados*/
-.link:visited{
+.link:visited {
     color: #fff;
 }
 
 /* Pseudo clase para los link que estan en los botones, sirve para no revelar enlases vicitados y que tengan el mismo color que los no visitados*/
-.link{
+.link {
     text-decoration: none;
-    }
+}
 
-    .section-boton{
-        align-content: center;
-        justify-content: center;
-        display: grid;
-        height: 100vh;
-    }
-    
-    .informes-ventas{
-        margin-left: 30%;
-    }
-    
-    .div-filtros{
-        margin-left: 40%; 
-        margin-top: 5%;
-    }
-    .div-filtros2{
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    .card-caja{
-        background-color: gold;
-        display:inline-block;
-    }
-    /* Contenedor cards caja */
-    .container-flex{
-        display: flex;
-        justify-content: space-evenly;
-    }
-.table{
+.section-boton {
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    height: 100vh;
+}
+
+.informes-ventas {
+    margin-left: 30%;
+}
+
+.div-filtros {
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.div-filtros2 {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-caja {
+    background-color: gold;
+    display: inline-block;
+}
+
+/* Contenedor cards caja */
+.container-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.table {
     background-color: #fff;
 }
-.row-venta{
+
+.row-venta {
     background-color: lightgrey;
 }
 
- /* Responsive para menos de 500px */
-    @media screen and (max-width: 500px){
-        .btn2{
-            border: 3px solid rgba(100,100,100,0.1);  
-            /* Margen alrededor del boton */
-            margin-bottom: 20px;
-            /* Alto del boton, oooo margen interno con respecto a la palabra */
-            padding: 15px;
-            /* Ancho del boton */
-            width: 200px;
-            /* Radio de las esquinas del boton */
-            border-radius: 8px;
-            /* velocidad de transicion del hover */
-            transition: 0.6s;   
-            /* Dibujito del cursor, en este caso la manito */
-            cursor: pointer;
-            /* Fuente: Tipo de fuente */
-            font-family: 'poppins', sans-serif;
-            /* Tamaño de fuente */
-            font-size: 12px;
-            /* Fuente: Color */
-            color: #ffffff;
-            /* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
-            font-weight: 0;
-            /* Creeeeooo que es el nivel de transparencia */
-            background-size: 300%;                  
-            }
+/* Responsive para menos de 500px */
+@media screen and (max-width: 500px) {
+    .btn2 {
+        border: 3px solid rgba(100, 100, 100, 0.1);
+        /* Margen alrededor del boton */
+        margin-bottom: 20px;
+        /* Alto del boton, oooo margen interno con respecto a la palabra */
+        padding: 15px;
+        /* Ancho del boton */
+        width: 200px;
+        /* Radio de las esquinas del boton */
+        border-radius: 8px;
+        /* velocidad de transicion del hover */
+        transition: 0.6s;
+        /* Dibujito del cursor, en este caso la manito */
+        cursor: pointer;
+        /* Fuente: Tipo de fuente */
+        font-family: 'poppins', sans-serif;
+        /* Tamaño de fuente */
+        font-size: 12px;
+        /* Fuente: Color */
+        color: #ffffff;
+        /* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
+        font-weight: 0;
+        /* Creeeeooo que es el nivel de transparencia */
+        background-size: 300%;
     }
+}
 
 
-    
-  /* Responsive para menos de 360px */
-    @media screen and (max-width: 360px){
-        .btn2{
-            border: 3px solid rgba(100,100,100,0.1);  
-            /* Margen alrededor del boton */
-            margin-bottom: 20px;
-            /* Alto del boton, oooo margen interno con respecto a la palabra */
-            padding: 15px;
-            /* Ancho del boton */
-            width: 100px;
-            /* Radio de las esquinas del boton */
-            border-radius: 8px;
-            /* velocidad de transicion del hover */
-            transition: 0.6s;   
-            /* Dibujito del cursor, en este caso la manito */
-            cursor: pointer;
-            /* Fuente: Tipo de fuente */
-            font-family: 'poppins', sans-serif;
-            /* Tamaño de fuente */
-            font-size: 12px;
-            /* Fuente: Color */
-            color: #ffffff;
-            /* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
-            font-weight: 0;
-            /* Creeeeooo que es el nivel de transparencia */
-            background-size: 300%;                  
-            }
+
+/* Responsive para menos de 360px */
+@media screen and (max-width: 360px) {
+    .btn2 {
+        border: 3px solid rgba(100, 100, 100, 0.1);
+        /* Margen alrededor del boton */
+        margin-bottom: 20px;
+        /* Alto del boton, oooo margen interno con respecto a la palabra */
+        padding: 15px;
+        /* Ancho del boton */
+        width: 100px;
+        /* Radio de las esquinas del boton */
+        border-radius: 8px;
+        /* velocidad de transicion del hover */
+        transition: 0.6s;
+        /* Dibujito del cursor, en este caso la manito */
+        cursor: pointer;
+        /* Fuente: Tipo de fuente */
+        font-family: 'poppins', sans-serif;
+        /* Tamaño de fuente */
+        font-size: 12px;
+        /* Fuente: Color */
+        color: #ffffff;
+        /* Fuente: Espesor de fuente, lo puse para no olvidar (Para hacerla mas negrita) */
+        font-weight: 0;
+        /* Creeeeooo que es el nivel de transparencia */
+        background-size: 300%;
     }
-    /* Responsive Cards de Caja */
-    @media screen and (max-width: 1000px){
-        .container-flex{
-            flex-wrap: wrap;
-        }
+}
+
+/* Responsive Cards de Caja */
+@media screen and (max-width: 1000px) {
+    .container-flex {
+        flex-wrap: wrap;
     }
-    @media screen and (max-width: 3500px) {
-        .table{
+}
+
+@media screen and (max-width: 3500px) {
+    .table {
         display: flex;
         flex-direction: column;
-        }
-   }
+    }
+}
+
+.centrar {
+    text-align: center;
+}
+/* Estilos de pag altas y baja de usuarios*/
+
+.marco{
+    width: 100%;
+    height: 400px;
+}
