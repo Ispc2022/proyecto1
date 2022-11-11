@@ -124,16 +124,56 @@ background-size: 300%;
         background-color: gold;
         display:inline-block;
     }
-    /* Contenedor cards caja */
-    .container-flex{
-        display: flex;
-        justify-content: space-evenly;
-    }
+ 
 .table{
     background-color: #fff;
 }
 .row-venta{
     background-color: lightgrey;
+}
+.select {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 100%;
+    overflow: hidden;
+    background-color:cadetblue;
+    color:#ffffff;
+  }
+  .select1 {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 100%;
+    overflow: hidden;
+    background-color:darkolivegreen;
+    color: #ffffff;
+  }
+  .container-caja{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 30px;
+}
+   /* Contenedor cards */
+   .container-flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    padding-right: 10%; 
+    gap: 30px 30px;
+}
+.caja-ventas{
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 2%;
+    background-color: grey;
+    border: 4px solid black;
+   
+}
+.caja-ventas-titulo{
+    color:#ffffff;
+    border-radius: 2%;
+    border:2% lightgray;
+    font-size: medium;
+    background-color: #004;
 }
 
  /* Responsive para menos de 500px */
@@ -197,8 +237,8 @@ background-size: 300%;
     }
     /* Responsive Cards de Caja */
     @media screen and (max-width: 1000px){
-        .container-flex{
-            flex-wrap: wrap;
+        .container-caja{
+            grid-template-columns: repeat(auto-fill, 186px);
         }
     }
     @media screen and (max-width: 3500px) {
