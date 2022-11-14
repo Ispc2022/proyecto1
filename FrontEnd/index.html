@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="CSS/login.css">
   </head>
   <body>
-    <form name="login" onsubmit="return false">
+    <form id="form" name="login" onsubmit="return false">
     <div class="form-login" id="contenedor">
       <h5 style = 'color:#fff'>Inicio de sesión</h5>
-      <div>
+      <div style="background-color: black;">
         <input type="email" required autocomplete="off" name="usuario" class="controls" style="color: white" 
         type="email" id= "email" name="usuario" value="" placeholder="Email">
       </div>
-      <div>
-        <input type="password" required pattern="^[a-zA-Z0-9]{4,}$" autocomplete="off" name="clave" required 
-        class="controls" style="color: white" type="password" id= "clave" name="clave" value="" placeholder="Contraseña">
+      <div style="background-color: black;">
+        <input type="password" required pattern="^[a-zA-Z0-9]{4,}$" required autocomplete="off" name="clave"  
+        onchange="pass()" class="controls" style="color: white" type="password" id= "clave" name="clave" value="" placeholder="Contraseña">
       </div>
       <div>
           <button type="submit" id="boton-submit" onclick="home()" class="btn2 btn1" style="color: #fff; margin-left: 5%;">Ingresar</button>
