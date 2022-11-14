@@ -11,13 +11,18 @@
 </head>
 <body>
     <nav>
-        <button class="nav-boton" onclick="accion()">Menú</button>
-        <a href="home.html"nav-enlace desaparece"><img src="Logos/LOGO.png" width="150"></a>    
-    </nav>
-    <div class="container-flex">
-        <div class="card text-bg-warning mb-3">
-        <div class="card-header" style="font-family: Rubik Distressed; font-size: larger;";>AJUSTAR TARIFAS </div>
-        <div class="card-body">
+        <a href="home.html"><img src="Imagenes/LOGO.png" width="150"></a>
+        <div class= "div-back">
+        <a href="ajustes.html">  
+          <button class="back"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg></button>
+        </div>
+      </a>
+      </nav>
+     <div class="caja-ventas" style="margin-left: auto; margin-right: auto; width: 30%; align-items: center;">
+      <div class="card-header" style="text-align: center;background-color:aquamarine;font-family: Rubik Distressed; border-bottom: 1px solid #000">ACTUALIZAR TARIFAS</div>
+      <div class="card-body">
             <form>
                 <div class="input-group">
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size:medium; background-color:#F5F5F5;">
@@ -36,11 +41,12 @@
                     <span class="input-group-text">Ingrese Nuevo Valor</span>
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
-                <div style="margin-top:10px; margin-left: 40px;">
-                    <button type="button" class="btn btn-secondary">Actualizar Tarifa</button>
+                <div style="margin-top:10px;margin-left: 35%;">
+                    <button type="button" class="btn btn-warning">Actualizar Tarifa</button>
             </div>
             </form>
         </div>
       </div>  
+     </div>
     </div>
 </body>

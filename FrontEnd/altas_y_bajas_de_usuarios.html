@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PARKINGSETTING</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <a href="home.html"><img src="Imagenes/LOGO.png" width="150"></a>
+        <div class= "div-back">
+        <a href="ajustes.html">  
+          <button class="back"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg></button>
+        </div>
+      </a>
+    
+      </nav>
+    
+    <div class="container-caja">
+        
+    <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:#000;color:#fff;font-family: Rubik Distressed; border-bottom: 1px solid #000">
+			ALTA DE USUARIO</div>
+        <div class="card-body">
+            <form>
+                <div class="input-group" style="margin-top:1rem ;">
+                    <span class="span-box" >APELLIDO Y NOMBRE</span>
+                    <input  id="nombre-alta" class="input-box"aria-label="With input " required autocomplete="off"></input >
+                </div>
+               
+                <div class="input-group" style= "margin-top:10px ;">
+                    <span class="span-box">EMAIL</span>
+                    <input  id="email-alta"class="input-box"aria-label="With input "required autocomplete="off"></input >
+                </div>
+                <div class="input-group" style= "margin-top:10px ;">
+                <select id="tipo-alta" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size:medium; background-color:#F5F5F5;">
+                    <option disabled selected>TIPO DE USUARIO</option>
+                    <option value="1">ADMINISTRADOR</option>
+                    <option value="2">USUARIO</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="span-box">NOMBRE DE USUARIO</span>
+                    <input  id="user-alta"class="input-box"aria-label="With input "  required autocomplete="off"></input >
+                </div>
+                <div class="input-group" style= "margin-top:10px;">
+                    <span class="span-box">CONTRASEÑA</span>
+                    <input  id="pass-alta"class="input-box"aria-label="With input " required autocomplete="off"></input >
+                </div>
+                <div style="margin-top:5%">
+                <button type="button" class="btn btn-warning">ALTA USUARIO</button>
+            </div>
+            </form>
+        </div>
+      </div>  
+
+      <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:#000;color:#fff;font-family: Rubik Distressed; border-bottom: 1px solid #000">
+			CONSULTAR USUARIOS ACTIVOS</div>
+        <div class="card-body">
+            <form>
+               
+                <div style="margin-top: 10%">
+                    <button type="button" class="btn btn-warning">Consultar</button>
+                </div>
+               ›
+            </form>
+        </div>
+      </div>
+
+  
+	  <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:#000;color:#fff;font-family: Rubik Distressed; border-bottom: 1px solid #000">
+			MODIFICAR O ELIMINAR USUARIO</div>
+        <div class="card-body">
+            <form>
+                <div class="input-group" style="margin-bottom: 10%;margin-top: 1rem">
+                    <span class="span-box">INGRESE USUARIO</span>
+                    <input  id="user-update" class="input-box" aria-label="With input "  required autocomplete="off"></input >
+                </div>
+				<div class="input-group">
+                </div>
+				<div class="input-group">
+                    <span class="span-box">APELLIDO Y NOMBRE</span>
+                    <input  id="nombre-update" class="input-box"aria-label="With input"required autocomplete="off" ></input >
+                </div>
+               
+                <div class="input-group" style= "margin-top:10px ;">
+                    <span class="span-box">EMAIL</span>
+                    <input  id="email-update" class="input-box"aria-label="With input " required autocomplete="off"></input >
+                </div>
+                <div class="input-group" style= "margin-top:10px ;">
+                <select id="tipo-update" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size:medium; background-color:#F5F5F5;">
+                    <option disabled selected>TIPO DE USUARIO</option>
+                    <option value="1">ADMINISTRADOR</option>
+                    <option value="2">USUARIO</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="span-box">NOMBRE DE USUARIO</span>
+                    <input  id="user2-update" class="input-box"aria-label="With input " required autocomplete="off"></input >
+                </div>
+                <div class="input-group" style= "margin-top:10px;">
+                    <span class="span-box">CONTRASEÑA</span>
+                    <input  id="pass-update" class="input-box"aria-label="With input " required autocomplete="off"></input >
+                </div>
+                <div style="margin-top:5%">
+                <button type="submit" class="btn btn-warning">ACTUALIZAR</button>
+				<button type="submit" class="btn btn-danger">ELIMINAR</button>
+            </div>
+			
+            </form>
+        </div>
+      </div>  
+    </div>
+    
+    <script src="./altas_y_bajas_de_usuarios.js"></script>
+</body>
+            
+            

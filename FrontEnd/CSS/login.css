@@ -1,17 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color:lawngreen;
+
+  
 }
 
 body {
   font-family: arial;
-  background-image: url('Imagenes/Fondo.jpg');
+  background-image: url('../Imagenes/Fondo.jpg');
 }
 
 .form-login {
   width: 400px;
-  height: 340px;
+  height: auto;
   background: #4e4d4d;
   margin: auto;
   margin-top: 180px;
@@ -53,7 +55,7 @@ body {
 .form-login p{
   height: 40px;
   text-align: center;
-  border-bottom: 1px solid;
+  
 }
 
 .form-login a {
@@ -65,3 +67,8 @@ body {
 .form-login a:hover {
   text-decoration: underline;
 }
+.error {
+background-color: red;
+color:#000
+  }
+

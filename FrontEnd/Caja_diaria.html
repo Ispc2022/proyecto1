@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PARKINGSETTING</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <a href="home.html"><img src="Imagenes/LOGO.png" width="150"></a>
+        <div class= "div-back">
+        <a href="home.html">  
+          <button class="back"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg></button>
+        </div>
+      </a>
+    
+      </nav>
+    
+    <div class="container-caja">
+        
+    <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:aquamarine;font-family: Rubik Distressed; border-bottom: 1px solid #000">
+            CAJA DE TURNO</div>
+        <div class="card-body" style="margin-left: 2%">
+            <form>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Referencia</span>
+                    <input class="input-box" id="ref-caja"aria-label="With input" required pattern="^[a-zA-Z0-9]{4,}$" autocomplete="off" ></input>
+                </div>
+               
+                <div class="input-group" style= "margin-top:10px ;">
+                    <span class="span-box" >Patente</span>
+                    <input class="input-box" id="patente-caja" aria-label="With input" disabled></input>
+                </div>
+                <div class="input-group" style= "margin-top:10px ;">
+                <select id="select-caja" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size:medium; background-color:#F5F5F5;" required>
+                    <option value="0" disabled selected>Forma de Pago</option>
+                    <option value="1">Efectivo</option>
+                    <option value="2">Tarjeta</option>
+                    <option value="3">Mercado Pago</option>
+                    <option value="3">Cuenta Dni</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="span-box">Detalle</span>
+                    <input class="input-box" id="detalle-caja"aria-label="With input" disabled ></input>
+                </div>
+                <div class="input-group" style= "margin-top:10px;">
+                    <span class="span-box">Total</span>
+                    <input class="input-box" id="total-caja" aria-label="With input" disabled></input>
+                </div>
+                <div style="margin-top:5%">
+                    <button type="submit" onclick="validar()" value="Confirmar" class="btn btn-warning">Confirmar</button>
+                <button type="button" class="btn btn-warning">Comprobante</button>
+            </div>
+            </form>
+        </div>
+      </div>  
+
+      <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:mediumseagreen;font-family: Rubik Distressed; border-bottom: 1px solid #000">GASTOS O RETIROS</div>
+        <div class="card-body" style="margin-left: 2%">
+            <form>
+                <div class="col-auto">
+                    <div class="card-header" style="margin-top: 5%;margin-bottom: 5%;background-color:peru;font-family: Rubik Distressed; border-bottom: 1px solid #000">GASTOS</div>
+                  </div>
+                 
+                  <div class="input-group">
+                    <span class="span-box">Importe</span>
+                    <input class="input-box" id="importe-gastos"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div class="input-group" style= "margin-top:10px ;">
+                    <span class="span-box">Detalle</span>
+                    <input class="input-box" id="detalle-gastos"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div style="margin-top:5%;margin-left: 1%;">
+                    <button id="btn-gastos" type="submit" class="btn btn-warning">Confirmar</button>
+                </div>
+            </form>
+            <form>
+                <div class="col-auto">
+                    <div class="card-header" style="margin-top: 5%;margin-bottom: 5%;background-color:peru;font-family: Rubik Distressed; border-bottom: 1px solid #000">RETIROS</div>
+                  </div>
+                  <div class="input-group">
+                    <span class="span-box">Importe</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div class="input-group" style= "margin-top:10px ;">
+                    <span class="span-box">Detalle</span>
+                    <input class="input-box" id="detalle-retiros"aria-label="With input" required autocomplete="off"></input>
+                </div>
+                <div style="margin-top:5%;margin-left: 1%;">
+                    <button id="btn-retiros" type="submit" class="btn btn-warning">Confirmar</button>
+                </div>
+            </form>
+        </div>
+      </div>
+
+  
+      <div class="caja-ventas" style="margin-left: auto; margin-right: auto">
+        <div class="card-header" style="text-align: center;background-color:limegreen;font-family: Rubik Distressed; border-bottom: 1px solid #000">CIERRE DE CAJA</div>
+        <div class="card-body" style="margin-left: 2%">
+            <form>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Total en Efectivo</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off"></input>
+                </div>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Total en Tarjeta</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Caja Inicial</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Total Gastos</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div class="input-group" style="margin-top:2%">
+                    <span class="span-box">Total Retiros</span>
+                    <input class="input-box" id="importe-retiros"aria-label="With input" required autocomplete="off" ></input>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-danger" style="margin-top: 5%">Confirmar Cierre</button>
+                </div>
+                </form>
+        </div>
+      </div>
+    </div>
+    <script src="./caja.js"></script>
+</body>
+
+            
+            
