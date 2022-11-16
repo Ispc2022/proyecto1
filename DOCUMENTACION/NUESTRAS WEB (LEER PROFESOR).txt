@@ -1,10 +1,9 @@
-sitio web de nuestra empresa de desarrollo web https://digitalsolutions.ar (en proceso de alta de dominio) alternativa (http://c2501377.ferozo.com/)
-
+sitio web de nuestra empresa de desarrollo web https://digitalsolutions.ar 
 
 
 sitio web de nuestro proyecto parkingsetting :
 
-    http://parkingsetting.infinityfreeapp.com/
+    http://parkingsetting.com.digitalsolutions.ar
 
                     para ingresar:
 
