@@ -4,36 +4,63 @@ const clave = document.getElementById('clave');
 const userAdmin = "admin@parkingsetting.com"
 const claveAdmin = "123admin123"
 
-function home(){
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	
-	checkInputs();
+	if (check()) {
+		login()
+	}
+
 });
 
-function checkInputs() {
-	// trim to remove the whitespaces
+///////////////////////////////
+function check() {
+	
 	const emailValue = email.value.trim();
-	const passwordValue = clave.value.trim();
-	
-	
+	const emailVerif = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
 	if(emailValue === '') {
-		setErrorFor(email, 'No puede dejar el email en blanco');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'No ingreso un email válido');
-	} else {
-		setSuccessFor(email);
-	}
-	
+		setErrorFor(email, 'Campo Obligatorio');
+	} 
+	else if (emailVerif.test(email.value)) {
+		setErrorFor(email, ' ')
+	} 
+	else if (!emailVerif.test(email.value)) {
+		setErrorFor(email, 'Debe ingresar un email válido');
+	} 
+	else {
+		return true
+		}
+
+	const passwordValue = clave.value.trim();
+
 	if(passwordValue === '') {
-		setErrorFor(clave, 'Password no debe ingresar en blanco.');
-	} else {
-		setSuccessFor(clave);
-	}
+		setErrorFor(clave, 'Campo Obligatorio');
 	
+	}
+	else  {
+		setErrorFor(clave, '')
+		return true
+	}
 }
 
+	function login() {
+
+	if (email.value !== userAdmin) {
+		alert("usuario y/o contraseña incorrecto/s")
+		}
+		
+	else if (clave.value !== claveAdmin) {
+		alert("usuario y/o contraseña incorrecto/s")	
+	}	
+	else {
+		window.location.href = "home.html"
+		}
+
+}
+
+
+///////////////////////////////
 function setErrorFor(input, message) {
 	const formControl = input.parentElement;
 	const small = formControl.querySelector('small');
@@ -41,30 +68,4 @@ function setErrorFor(input, message) {
 	small.innerText = message;
 }
 
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
-}
-
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
-// establecer usuario y clave & redirigir
-
-document.getElementById("boton-submit").addEventListener("click",login);
-}
-function login(e){ 
-    e.preventDefault();
-
-if (email.value == userAdmin && clave.value == claveAdmin) { 
-    window.location="home.html";
-    }
-	else
-	{
-		alert("Los datos proporcionados SON INCORRECTOS")
-	}
-
-
-};
 
